@@ -1,7 +1,10 @@
-_Last updated: Oct. 26, 2022_
+_Last updated: Oct. 31, 2022_
 # Regression Model Selection
 "When building regression models, it often takes a lot of experience and knowledge about your data in order to determine the variables and transformation of variables that you want to include in the model building process.  There are many variable selection techniques (or feature selection) but it can be a confusing practice when you are first learning."
 
-## Brief discussion of how you would plan to determine variables to use in a regression model.  
+### Brief discussion of how you would plan to determine variables to use in a regression model.  
+I think a big thing is to get an understanding of what's being studied, the context of the data. Depending on what you're looking atm you might be able to have some intuition on important variables. For example, bike rentals; I would assume people would rent more bikes on warmer days with no precipitation. Rainfall, temperature, season - I would think these would be good predictors. For other things, like response to a treatment, age and gender might be important. It really depends on what data is being collected, what's being researched, and overall context of the data collection. Data collected on some research topics during a pandemic would look different than data collected at a different time.
+Of course, you might not always be able to have or get more insights about the data. Doing a stepwise or subset selection, and/or looking at statistical criterion ($R^2$, Adjusted $R^2$, AIC, BIC, Mallow's $C_p$, etc.) would be a good way to pick predictors. 
 
-## What variable selection techniques do you prefer and why?
+### What variable selection techniques do you prefer and why?
+It really depends on how many predictors are in the dataset. For _doing in general_, I like the backwards method because of simplicity; forward selection has extra steps in a way, and best subset can get complicated fast if you have a lot of variables. However, it wouldn't be my pick for fitting the best model. I would instead want to look at a combination of methods. Perhaps start with stepwise or subset methods, but compare different criteria: Adjusted $R^2$, AIC, BIC, Mallow's $C_p$, etc. I would want to maybe compare techniques and pick the best model based on criteria, the one that has the most best criteria values between models. It's also important to pick the most simple model, so if I find a simpler model with similar criteria values to a more complex model, I would want to choose the simpler one. No model will ever be perfect, but I think this way would give a generally good fit, though it might be tedious to do.
