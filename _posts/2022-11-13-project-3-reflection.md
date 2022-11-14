@@ -1,4 +1,4 @@
-# Project $33\frac{1}{3}$
+# Project 33 1/3
 
 Regression! I enjoy fitting models and finding best fits. This project had us look at a data set and fit models to subsets of the data, specifically, two linear regression models, a random forest, and a boosted tree.
 
